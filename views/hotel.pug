@@ -2,4 +2,14 @@ extends layout
 
 block content
   h1= title
-
+  - var results = [{Hotel_name: "Novotel",Location: "Hyderabad",Price per-day: 130$},{Hotel_name: "Oberoi",Location: "Mumbai",Price per-day: 170$},{Hotel_name: "JW Marriott",Location: "Delhi",Price per-day: 200$}];
+   div(class = "container-fluid")
+    div(class = "row")
+     each item in results
+        div(class="col-sm-4") Hotel_name: #{form.Hotel_name} 
+        br
+        br 
+        div(class="col-sm-4") Location: #{form.Location}
+        br
+        br  
+        div(class="col-sm-4") Price per-day: #{form.Price per-day}
