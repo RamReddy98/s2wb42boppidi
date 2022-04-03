@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= title
-  - var results = [{Hotel_name: "Novotel",Location: "Hyderabad",Price per-day: 130$},{Hotel_name: "Oberoi",Location: "Mumbai",Price per-day: 170$},{Hotel_name: "JW Marriott",Location: "Delhi",Price per-day: 200$}];
+  - var results = [{Hotel_name: "Novotel",Location: "Hyderabad",Price: 130$},{Hotel_name: "Oberoi",Location: "Mumbai",Price: 170$},{Hotel_name: "JW Marriott",Location: "Delhi",Price: 200$}];
    div(class = "container-fluid")
     div(class = "row")
      each item in results
@@ -12,4 +12,5 @@ block content
         div(class="col-sm-2") Location: #{item.Location}
         br
         br  
-        div(class="col-sm-2") Price per-day: #{item.Price per-day}
+        div(class="col-sm-2") Price: #{item.Price}
+   
