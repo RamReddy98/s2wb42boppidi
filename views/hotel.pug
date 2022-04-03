@@ -6,10 +6,10 @@ block content
    div(class = "container-fluid")
     div(class = "row")
      each item in results
-        div(class="col-sm-2") Hotel_name: #{form.Hotel_name} 
+        div(class="col-sm-2") Hotel_name: #{item.Hotel_name} 
         br
         br 
-        div(class="col-sm-2") Location: #{form.Location}
+        div(class="col-sm-2") Location: #{item.Location}
         br
         br  
-        div(class="col-sm-2") Price per-day: #{form.Price per-day}
+        div(class="col-sm-2") Price per-day: #{item.Price per-day}
