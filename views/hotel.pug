@@ -1,16 +1,13 @@
 extends layout
 
+
 block content
   h1= title
-  - var results = [{Hotel_name: "Novotel",Location: "Hyderabad",Price: 130$},{Hotel_name: "Oberoi",Location: "Mumbai",Price: 170$},{Hotel_name: "JW Marriott",Location: "Delhi",Price: 200$}];
-   div(class = "container-fluid")
-    div(class = "row")
-     each item in results
-        div(class="col-sm-2") Hotel_name: #{item.Hotel_name} 
-        br
-        br 
-        div(class="col-sm-2") Location: #{item.Location}
-        br
-        br  
-        div(class="col-sm-2") Price: #{item.Price}
-   
+  p Welcome to #{title}
+  - var results = [{Hotel_name: "Novotel",Location: "Hyderabad",Price: 130$},{Hotel_name: "Oberoi",Location: "Mumbai",Price: 170$},{Hotel_name: "JW Marriott",Location: "Delhi",Price: 200$}]
+  -var space="   "
+  div(class="container-fluid") 
+  div(class="row")
+  -
+  each item in results
+    div(class="col-sm-2") #{item.Hotel_name} #{item.Location} #{item.Price}
