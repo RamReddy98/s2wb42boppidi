@@ -2,17 +2,20 @@ extends layout
 
 block content
   h1= title
-  - var results = [{pancake_type: "Scotch Pancakes",price: 21,toppings:"maple syrup"},{pancake_type: "Russian Blinis",price: 27,toppings:" fresh fruit"},{pancake_type: "Irish Boxty",price: 30,toppings:"whipped cream"}];
+  br
+  - var results = [{Hotel_name:"Oberoi", location: "Mumbai", price:150}, {Hotel_name:"Awasa", location: "Hyderabad", price:130},{Hotel_name:"JW Marriott", location: "Delhi", price:200}]
    div(class = "container-fluid")
     div(class = "row")
-     each form,index in results
-        div(class="col-sm-4" onclick=`buy(${index})`) pancake-type: #{form.pancake_type} 
+     each item,index in results
+        div(class="col-sm-2" onclick=`buy(${index})`) Hotel_name: #{item.Hotel_name} 
         br
         br 
-        div(class="col-sm-4" onclick=`buy(${index})`) price: #{form.price}
+        div(class="col-sm-2" onclick=`buy(${index})`) location: #{item.location}
         br
         br  
-        div(class="col-sm-4" onclick=`buy(${index})`) toppings: #{form.toppings}
-        script.
-                function buy(itemNo){
-                    alert(`You purchased itemc ${itemNo+1}`)
+        div(class="col-sm-2" onclick=`buy(${index})`) price: #{item.price}
+   script.
+          function buy(itemNo)
+          {
+              alert(`You purchased item ${itemNo+1}`)
+          }          
